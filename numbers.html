@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Numbers</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.min.css" />
+    </head>
+
+    <body>
+        <div class="popup-background"></div>
+        <header class="header">
+            <div class="wrapper header__wrapper">
+                <a href="index.html" class="logo__link">
+                    <img src="img/logo.svg" alt="Логотип" width="63">
+                </a>
+
+                <div class="burger">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </div>
+
+
+                <ul class="navigation__list header__list">
+                    <li class="navigation__item">
+                        <a href="#why" class="navigation__link">Почему мы?</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="numbers.html" class="navigation__link">Номера</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#comments" class="navigation__link">Отзывы</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#contacts" class="navigation__link">Как нас найти</a>
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+
+        <section class="catalog">
+            <div class="wrapper catalog__wrapper">
+                <div class="first__line">
+                    <h1 class="catalog__title">Наши номера</h1>
+                    <button class="show-filter__button"><span class="filter__icon"></span>Фильтры</button>
+                    <form action="" class="filter__form">
+                        <select name="" id="select__list">
+                            <option value="">Сортировать</option>
+                            <option value="areaUp">По площади<span class="arrow">⬆</span></option>
+                            <option value="areaDown">По площади<span class="arrow">⬇</span></option>
+                            <option value="priceUp">По цене<span class="arrow">⬆</span></option>
+                            <option value="priceDown">По цене<span class="arrow">⬇</span></option>
+                        </select>
+                </div>
+                <div class="numbers-filter-wrapper">
+                    <div class="filter">
+                        <div class="filter__cross"></div>
+                        <p class="filter__title">Цена за сутки, ₽</p>
+                        <label>от<input type="text" class="price__input" name="start-price" value="100"></label> <br>
+                        <label>до<input type="text" class="price__input" name="finish-price" value="600"></label>
+
+                        <p class="filter__title">Площадь</p>
+                        <ul class="area__list">
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="0.63" id="0.63">
+                                <span class="custom-checkbox"></span>
+                                <label for="0.63">0,63 м2</label>
+                            </li>
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="0.90" id="0.90">
+                                <span class="custom-checkbox"></span>
+                                <label for="0.90">0,90 м2</label>
+                            </li>
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="1.13" id="1.13">
+                                <span class="custom-checkbox"></span>
+                                <label for="1.13">1,13 м2</label>
+                            </li>
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="1.56" id="1.56">
+                                <span class="custom-checkbox"></span>
+                                <label for="1.56">1,56 м2</label>
+                            </li>
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="2.56" id="2.56">
+                                <span class="custom-checkbox"></span>
+                                <label for="2.56">2,56 м2</label>
+                            </li>
+                            <li class="area__item">
+                                <input class="native-checkbox" type="checkbox" name="2.88" id="2.88">
+                                <span class="custom-checkbox"></span>
+                                <label for="2.88">2,88 м2</label>
+                            </li>
+                        </ul>
+
+                        <p class="filter__title">Оснащение номера</p>
+                        <ul class="equipment__list">
+                            <li class="equipment__item">
+                                <input class="native-checkbox" type="checkbox" name="empty" id="empty">
+                                <span class="custom-checkbox"></span>
+                                <label for="empty">Пустой номер</label>
+                            </li>
+                            <li class="equipment__item">
+                                <input class="native-checkbox" type="checkbox" name="lounge" id="lounge">
+                                <span class="custom-checkbox"></span>
+                                <label for="lounge">Лежак</label>
+                            </li>
+                            <li class="equipment__item">
+                                <input class="native-checkbox" type="checkbox" name="sharpener" id="sharpener">
+                                <span class="custom-checkbox"></span>
+                                <label for="sharpener">Когтеточка</label>
+                            </li>
+                            <li class="equipment__item">
+                                <input class="native-checkbox" type="checkbox" name="playground" id="playground">
+                                <span class="custom-checkbox"></span>
+                                <label for="playground">Игровой комплекс</label>
+                            </li>
+                            <li class="equipment__item">
+                                <input class="native-checkbox" type="checkbox" name="house" id="house">
+                                <span class="custom-checkbox"></span>
+                                <label for="house">Домик</label>
+                            </li>
+                        </ul>
+
+                        <button class="filter__button submit-button">Применить</button>
+                        <button class="filter__button reset-button">Сбросить фильтр</button>
+                        </form>
+                    </div>
+
+                    <div class="numbers">
+                        <!--строится через js -->
+
+                    </div>
+                    <div class="book-popup">
+                        <h3 class="book__title">Забронировать номер<span class="book__cross"></span></h3>
+                        <form action="" method="post" class="book__form">
+                            <input type="text" name="ownerName" placeholder="Ваше имя">
+                            <input type="text" name="petName" placeholder="Имя питомца">
+                            <input type="tel" name="phone" id="" placeholder="Телефон" required>
+                            <input type="email" name="email" id="" placeholder="E-mail">
+                            <p class="date-wrapper">Дата заезда <div> с <input type="date" name="come" id=""> </div>
+                                по
+                                <input type="date" name="leave" id=""></p>
+                            <button class="button button-colored" type="submit">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="wrapper banner__wrapper">
+                <div class="banner__content">
+                    <p class="banner__first-line">Каждый 7-й день</p>
+                    <p class="banner__second-line">бесплатно!</p>
+                    <p class="banner__description">Акция действует при размещении <br>
+                        в номерах “Люкс” и “Супер-Люкс” </p>
+                    <button class="button">Забронировать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <div class="wrapper contacts__wrapper">
+                <div class="contacts__content">
+                    <h3 class="contacts__title">Как нас найти</h3>
+                    <div class="contacts__item">
+                        <span class="contacts__subtitle">Адрес</span>
+                        <p class="contacts__description">Санкт-Петербург, <br>
+                            ул Большая Конюшенная, д 19</p>
+                    </div>
+
+                    <div class="contacts__item">
+                        <span class="contacts__subtitle">Режим работы</span>
+                        <p class="contacts__description">Ежедневно, с 9:00 до 20:00</p>
+                    </div>
+
+                    <div class="contacts__item">
+                        <span class="contacts__subtitle">Телефон</span>
+                        <p class="contacts__description"><a class="contacts__link" href="tel:+8 (800) 333-55-99"> 8
+                                (800) 333-55-99</a></p>
+                    </div>
+
+                    <div class="contacts__item">
+                        <span class="contacts__subtitle">E-mail</span>
+                        <p class="contacts__description"><a class="contacts__link"
+                                href="mailto:info@cat-hotel.ru">info@cat-hotel.ru</a></p>
+                    </div>
+
+                    <div class="contacts__item">
+                        <span class="contacts__subtitle">Социальные сети</span>
+                        <p class="contacts__description">
+                            <ul class="social__list">
+                                <li class="social__item">
+                                    <a href="" class="social__link fb"></a>
+                                </li>
+                                <li class="social__item insta">
+                                    <a href="" class="social__link "></a>
+                                </li>
+                                <li class="social__item vk">
+                                    <a href="" class="social__link "></a>
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+                <div class="contacts__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123907!2d30.320894616211245!3d59.9387968690478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1595187146130!5m2!1sru!2sru"
+                        frameborder="0" style="border:0;" allowfullscreen='true' aria-hidden="false"
+                        tabindex="0"></iframe>
+                </div>
+
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="wrapper footer__wrapper">
+                <div class="footer__navigation">
+                    <a href="" class="logo__link">
+                        <img src="img/logo.svg" alt="Логотип" width="63">
+                    </a>
+                    <nav class="navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a href="#why" class="footer__link">Почему мы?</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="numbers.html" class="footer__link">Номера</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#comments" class="footer__link">Отзывы</a>
+                            </li>
+                            <li class="footer__item">
+                                <a href="#contacts" class="footer__link">Как нас найти</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="copyright">
+                    <span class="right"><span class="right__icon"></span> 2019 Все права защищены</span>
+                    <span class="politics">Политика конфиденциальности</span>
+                </div>
+            </div>
+        </footer>
+        <script src="js/numbersData.js"></script>
+        <script src="js/numbersScript.js"></script>
+    </body>
+
+</html>
